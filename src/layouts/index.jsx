@@ -3,6 +3,7 @@ import AddProduct from "../components/Admin/AddProduct";
 import HomeAdmin from "../components/Admin/Home";
 import Order from "../components/Admin/Order";
 import ProductManagement from "../components/Admin/Product";
+import UpdateOrder from "../components/Admin/UpdateOrder";
 import UpdateProd from "../components/Admin/UpdateProd";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -43,7 +44,8 @@ function Layouts() {
                   <Route path="order" element={<Order />} />
                   <Route path="add" element={<AddProduct />} />
                   <Route path="product" element={<ProductManagement />} />
-                  <Route path="update/:idProd" element={<UpdateProd />} />
+                  <Route path="updateProduct/:idProd" element={<UpdateProd />} />
+                  <Route path="updateOrder/:idOr" element={<UpdateOrder />} />
                 </Route>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />

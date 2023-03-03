@@ -41,8 +41,10 @@ function OrderUser() {
                     <div key={index}>
                         <div className="order-heading">
                             <div>
-                                <h5> {ord.id} - {ord.name} - {ord.phone} - {ord.orderDate} {"->"} {ord.deliveryDate}</h5>
-                                <h5 style={{color: 'green'}}>Địa chỉ: {ord.address}</h5>
+                                <h6 style={{color: 'black'}}>{ord.name} - {ord.phone}</h6>
+                                <h6 style={{color: 'black'}}>Ngày đặt: {ord.orderDate} {"->"} Ngày giao: {ord.deliveryDate}</h6>
+                                <h6 style={{color: 'green'}}>Địa chỉ: {ord.address}</h6>
+                                <h6>Trạng thái: {ord.status}</h6>
                             </div>
                             <Button onClick={() => handleDeleteOrder(ord.id)} variant={"danger"} className="h-50">Hủy đơn</Button>
                         </div>

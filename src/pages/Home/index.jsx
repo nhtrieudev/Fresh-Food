@@ -4,11 +4,9 @@ import { Col, Container, Row } from "react-bootstrap";
 import Product from "./Products";
 import Slider from "../../components/Slider";
 import { db } from "../../firebase/firebase-config";
-import { BallTriangle } from "react-loader-spinner";
 
 
 function Home() {
-  let [loading, setLoading] = useState(false);
   let [prodRct, setProdRct] = useState([]);
   let [prodTct, setProdTct] = useState([]);
   let [prodKtp, setProdKtp] = useState([]);
@@ -39,7 +37,7 @@ function Home() {
   return (
     <>
         <Slider />
-        <Container style={{width: "1200px"}}>
+        <Container>
           <Row className="d-flex justify-content-center">
               <Col className="home-title">Rau củ sạch hữu cơ</Col>
           </Row>
@@ -47,7 +45,7 @@ function Home() {
               <Product propProd={prodRct} />
           </Row>
         </Container>
-        <Container style={{width: "1200px"}}>
+        <Container>
           <Row className="d-flex justify-content-center">
               <Col className="home-title">Thịt tươi sống</Col>
           </Row>
@@ -55,7 +53,7 @@ function Home() {
               <Product propProd={prodTct} />
           </Row>
         </Container>
-        <Container style={{width: "1200px"}}>
+        <Container>
           <Row className="d-flex justify-content-center">
               <Col className="home-title">Nấm tươi hữu cơ</Col>
           </Row>

@@ -21,7 +21,7 @@ function Slider() {
                     alt="Second slide"
                 />
                 <Carousel.Caption>
-                    <p style={{fontSize: "50px", fontWeight: 600, marginBottom: "75px"}}>Thực phẩm tươi</p >
+                    <h3 style={{fontSize: "24px", fontWeight: 600}}>Thực phẩm tươi</h3>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={3500}>
@@ -31,7 +31,7 @@ function Slider() {
                     alt="Third slide"
                 />
                 <Carousel.Caption>
-                    <p style={{fontSize: "50px", fontWeight: 600, marginBottom: "75px"}}>Rau củ sạch</p >
+                    <h3 style={{fontSize: "24px", fontWeight: 600}}>Rau củ sạch</h3>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

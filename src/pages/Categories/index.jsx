@@ -1,10 +1,10 @@
 import { Col, Container, Dropdown, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Product from "../../components/Product";
 
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/firebase-config";
+import Product from "./Products";
 
 function Categories() {
     let { nameCate } = useParams('');
@@ -34,24 +34,24 @@ function Categories() {
 
     const sortByPrice50 = () => {
         let p = prodAll.filter((product) => product.price > 50000);
-        setProds(p);
+        return setProds(p);
     }
     const sortByPrice100 = () => {
         let p = prodAll.filter((product) => product.price > 100000);
-        setProds(p);
+        return setProds(p);
     }
     const sortByPrice150 = () => {
         let p = prodAll.filter((product) => product.price > 150000);
-        setProds(p);
+        return setProds(p);
     }
 
     const sortByPriceAsc = () => {
         let p = prodAll.sort((a, b) => a.price - b.price)
-        setProds([...p]);
+        return setProds([...p]);
     }
     const sortByPriceDesc = () => {
         let p = prodAll.sort((a, b) => b.price - a.price)
-        setProds([...p]);
+        return setProds([...p]);
     }
 
     const sortByNameAsc = () => {
@@ -59,28 +59,29 @@ function Categories() {
             if (a.name.toLowerCase() < b.name.toLowerCase()) {
                 return -1;
             }
+            return 1;
         })
-        setProds([...p]);
+        return setProds([...p]);
     }
     const sortByNameDesc = () => {
         let p = prodAll.sort(function(a, b) {
             if (a.name.toLowerCase() > b.name.toLowerCase()) {
                 return -1;
             }
+            return 1;
         })
-        setProds([...p]);
+        return setProds([...p]);
     }
 
     return ( 
         <>
             <Container style={{marginTop: "76px"}}>
-                <Row >
-                    <Col xs={1} sm={1} md={1} lg={1} xl={1}>
+                <Row className="d-flex justify-content-between">
+                    <Col>
                         <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                                 Bộ lọc
                             </Dropdown.Toggle>
-
                             <Dropdown.Menu>
                                 <Dropdown.Item onClick={sortByPrice50}> Giá: {'>'} 50,000đ</Dropdown.Item>
                                 <Dropdown.Item onClick={sortByPrice100}> Giá: {'>'} 100,000đ</Dropdown.Item>
@@ -88,10 +89,10 @@ function Categories() {
                             </Dropdown.Menu>
                         </Dropdown>
                     </Col>
-                    <Col xs={9} sm={9} md={9} lg={9} xl={10}>
+                    <Col>
                         <h3 className="pct text-center">Sản phẩm</h3>
                     </Col>
-                    <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
+                    <Col className="d-flex justify-content-end">
                         <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                                 Sắp xếp

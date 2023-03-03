@@ -8,7 +8,7 @@ function Product( props ) {
     return ( 
         <>
             {props.propProd?.slice(0, 8).map((p, index) => (
-                <Col key={index} xs={6} sm={6} md={4} lg={3} xl={3} style={{paddingTop: "16px"}} className="d-flex justify-content-center">
+                <Col key={index} xs={12} sm={6} md={4} lg={3} xl={3} style={{paddingTop: "16px"}} className="d-flex justify-content-center">
                     <Card className="cart" >
                         <Card.Img variant="top" src={p.image[0]} />
                         <Card.Body>

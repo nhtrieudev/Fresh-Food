@@ -33,7 +33,7 @@ function ProductManagement() {
     return ( 
         <>  
             <h3>Quản lý sản phẩm:</h3>
-            <Table striped bordered hover>
+            <Table responsive striped bordered hover>
                 <thead>
                     <tr>
                         <th>STT</th>
@@ -59,7 +59,7 @@ function ProductManagement() {
                             <td>{p.type}</td>
                             <td>{p.nametype}</td>
                             <td>{p.description}</td>
-                            <td><Button variant="primary" onClick={() => navigate(`/admin/update/${p.id}`)} style={{fontSize:"12px", width:"100%"}}>Sửa</Button></td>
+                            <td><Button variant="primary" onClick={() => navigate(`/admin/updateProduct/${p.id}`)} style={{fontSize:"12px", width:"100%"}}>Sửa</Button></td>
                             <td><Button variant="danger" style={{fontSize:"12px", width:"100%"}}>Xóa</Button></td>
                         </tr>
                     ))}
