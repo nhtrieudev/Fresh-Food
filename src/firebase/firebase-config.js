@@ -4,14 +4,22 @@ import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, si
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
+    // apiKey: "AIzaSyBApmkCwVy8lqnz9S4Gse5c--235TfRtH4",
+    // authDomain: "shopping-food-022023.firebaseapp.com",
+    // databaseURL: "https://shopping-food-022023-default-rtdb.asia-southeast1.firebasedatabase.app",
+    // projectId: "shopping-food-022023",
+    // storageBucket: "shopping-food-022023.appspot.com",
+    // messagingSenderId: "372286605478",
+    // appId: "1:372286605478:web:90e1be26844d744c7acc67",
+    // measurementId: "G-CP73Q77XJZ",
     apiKey: "AIzaSyBApmkCwVy8lqnz9S4Gse5c--235TfRtH4",
-    authDomain: "shopping-food-022023.firebaseapp.com",
-    databaseURL: "https://shopping-food-022023-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "shopping-food-022023",
-    storageBucket: "shopping-food-022023.appspot.com",
-    messagingSenderId: "372286605478",
-    appId: "1:372286605478:web:90e1be26844d744c7acc67",
-    measurementId: "G-CP73Q77XJZ"
+      authDomain: "shopping-food-022023.firebaseapp.com",
+      databaseURL: "https://shopping-food-022023-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "shopping-food-022023",
+      storageBucket: "shopping-food-022023.appspot.com",
+      messagingSenderId: "372286605478",
+      appId: "1:372286605478:web:90e1be26844d744c7acc67",
+      measurementId: "G-CP73Q77XJZ"
 };
 
 
